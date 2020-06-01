@@ -1,0 +1,8 @@
+Dockerfile
+.dockerignore
+yarn.lock
+
+node_modules/
+
+*.zip
+*.tar*
