@@ -9,7 +9,6 @@ import { config } from "./config/config";
 import V0_FEED_MODELS from "./feed/model.index";
 
 (async () => {
-  console.log(`Trying Host: ${process.env.POSTGRES_HOST}`);
   await sequelize.addModels(V0_FEED_MODELS);
   await sequelize.sync();
 
@@ -38,6 +37,5 @@ import V0_FEED_MODELS from "./feed/model.index";
   // Start the Server
   app.listen(port, () => {
     console.log(`server running ${config.url} | FEED port: ${port}`);
-    console.log(`press CTRL+C to stop server`);
   });
 })();

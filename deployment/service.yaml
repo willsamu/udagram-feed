@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service: udagram-feed-service
+  name: api-feed-svc
+spec:
+  selector:
+    app: udagram-api-feed
+  ports:
+    - name: "2310"
+      protocol: TCP
+      port: 80
+      targetPort: 2311
